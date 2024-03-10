@@ -33,10 +33,11 @@ class Conta {
   }
 
   void transferir(double valor, Conta destinoConta) {
-      if (_saldo >= valor) {
+    if (_saldo >= valor) {
       _saldo -= valor;
       destinoConta.depositar(valor);
       print('Transferência realizada com sucesso!');
+      imprimirDadosDaConta();
     } else {
       print('Saldo insuficiente para a transferência.');
     }
